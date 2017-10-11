@@ -1,10 +1,14 @@
-# Game Instructions
+# How To Play
+* Just open up index.html
+* You can also open up https://santiago-correa-dev.github.io/frogger/ in your browser and start playing.
+
+## Game Instructions
 * To start playing use the up, down , left and right keys to move the character.
 * The game will start automatically waiting on you to play.
 * If you win you get an alert saying - You win!
 * If you lose you get an alert saying - You lose!
 
-## Game Details
+### Game Details
 In this game you have a Player and Enemies (Bugs). 
 
 * The **goal** of the player is to reach the water, without colliding into any one of the _enemies_. 
