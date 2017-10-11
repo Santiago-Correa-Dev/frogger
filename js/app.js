@@ -16,7 +16,7 @@ class Enemy {
             this.x = 0;
         };
 
-        if (this.x >= player.x - 20 && this.x <= player.x + 20 && this.y >= player.y - 10 && this.y <= player.y + 10) {
+        if (this.x >= player.x - 50 && this.x <= player.x + 50 && this.y >= player.y - 10 && this.y <= player.y + 10) {
             player.reset();
             this.x = 0;
             player.score--;
