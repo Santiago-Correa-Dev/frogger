@@ -6,12 +6,13 @@ class Enemy {
         this.y = y;
         this.sprite = 'images/enemy-bug.png';
         this.points = 0;
-        this.speed = Math.random() + 2 * 1;
+        this.speed = Math.random() + 150 * 1;
     }
     // Parameter: dt, a time delta between ticks
     update(dt) {
 
-         this.x += dt * Math.random() + 2  * 1 + this.speed;
+        this.x = this.x + dt * this.speed;
+
         if (this.x >= 505) {
             this.x = 0;
         }
@@ -22,6 +23,8 @@ class Enemy {
             player.score--;
         }
     }
+
+
     // Draw the enemy on the screen, required method for game
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -33,9 +36,7 @@ class Enemy {
 // Draws Player on the screen, required method for game
 class Player extends Enemy {
     constructor() {
-        super();
-        this.x = 200;
-        this.y = 300;
+        super(200,300);
         this.sprite = 'images/char-boy.png';
         this.score = 0;
     }
@@ -49,10 +50,6 @@ class Player extends Enemy {
         }
 
         document.getElementById('score').innerHTML = this.score;
-    }
-
-    render() {
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
     reset() {
